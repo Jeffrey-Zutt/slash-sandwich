@@ -5,7 +5,7 @@
  * When called with trailingSlash=false, the string will become: '/foo/zoo/bar/moo'
  * When called with leadingSlash=false, the string will become: 'foo/zoo/bar/moo/'
  */
-export declare const slashSandwich: (parts: string[], { leadingSlash, trailingSlash }?: {
+export declare const slashSandwich: (parts: Array<string | undefined>, { leadingSlash, trailingSlash }?: {
     leadingSlash?: boolean | undefined;
     trailingSlash?: boolean | undefined;
 }) => string;
