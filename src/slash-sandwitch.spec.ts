@@ -22,6 +22,11 @@ describe('`slashSandwich()`', () => {
     )
   })
 
+  it('should omit a leading slash string starts with http:// or https://', () => {
+    expect(slashSandwich(['http://bar.com', 'foo/', '/bar'])).toEqual('http://bar.com/foo/bar/')
+    expect(slashSandwich(['https://bar.com', 'foo/', '/bar'])).toEqual('https://bar.com/foo/bar/')
+  })
+
   it('should glue parts together using exactly one slash when more slashes were given', () => {
     expect(slashSandwich(['foo', 'bar'], { leadingSlash: false })).toEqual(
       'foo/bar/',

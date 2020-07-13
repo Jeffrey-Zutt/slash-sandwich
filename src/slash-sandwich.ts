@@ -10,7 +10,7 @@ export const slashSandwich = (
   { leadingSlash = true, trailingSlash = true } = {},
 ): string => {
   let sandwich = stripDoubleSlashes(`/${parts.filter(_ => !!_).join('/')}/`)
-  if (!leadingSlash) {
+  if (!leadingSlash || sandwich.match(/^\/https?:\/\//)) {
     sandwich = stripLeadingSlash(sandwich)
   }
   if (!trailingSlash) {
