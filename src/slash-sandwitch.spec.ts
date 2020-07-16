@@ -10,6 +10,10 @@ describe('`slashSandwich()`', () => {
     expect(slashSandwich(['foo', 'bar'])).toEqual('/foo/bar/')
   })
 
+  it('should glue parts together when given numbers', () => {
+    expect(slashSandwich(['foo', 'bar', 1])).toEqual('/foo/bar/1/')
+  })
+
   it('should omit a trailing slash when option trailingSlash:false was given', () => {
     expect(slashSandwich(['foo', 'bar'], { trailingSlash: false })).toEqual(
       '/foo/bar',

@@ -6,7 +6,7 @@
  * When called with leadingSlash=false, the string will become: 'foo/zoo/bar/moo/'
  */
 export const slashSandwich = (
-  parts: Array<string | undefined>,
+  parts: Array<string | number | undefined>,
   { leadingSlash = true, trailingSlash = true } = {},
 ): string => {
   let sandwich = stripDoubleSlashes(`/${parts.filter(_ => !!_).join('/')}/`)
