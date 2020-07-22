@@ -1,7 +1,7 @@
 {
   "name": "slash-sandwich",
   "private": false,
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Join strings using exactly one slash",
   "module": "./dist",
   "main": "./dist/slash-sandwich.js",
