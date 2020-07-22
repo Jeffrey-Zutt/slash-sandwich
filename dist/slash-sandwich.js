@@ -10,7 +10,7 @@ exports.stripLeadingSlash = exports.stripTrailingSlash = exports.stripDoubleSlas
  */
 exports.slashSandwich = function (parts, _a) {
     var _b = _a === void 0 ? {} : _a, _c = _b.leadingSlash, leadingSlash = _c === void 0 ? true : _c, _d = _b.trailingSlash, trailingSlash = _d === void 0 ? true : _d;
-    var sandwich = exports.stripDoubleSlashes("/" + parts.filter(function (_) { return !!_; }).join('/') + "/");
+    var sandwich = exports.stripDoubleSlashes("/" + parts.filter(function (_) { return _ !== null || _ !== undefined; }).join('/') + "/");
     if (!leadingSlash || sandwich.match(/^\/https?:\/\//)) {
         sandwich = exports.stripLeadingSlash(sandwich);
     }
