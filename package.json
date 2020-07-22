@@ -3,17 +3,25 @@
   "private": false,
   "version": "1.0.9",
   "description": "Join strings using exactly one slash",
+  "module": "./dist",
   "main": "./dist/slash-sandwich.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "author": "Jeffrey Zutt <jeffrey@jeffreyzutt.nl> (http://yourblog.com)",
   "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
+  },
   "devDependencies": {
     "@types/jest": "^26.0.4",
-    "typescript": "^3.9.6",
+    "husky": "^4.2.5",
     "jest": "^26.1.0",
-    "ts-jest": "^26.1.1"
+    "ts-jest": "^26.1.1",
+    "typescript": "^3.9.6"
   }
 }

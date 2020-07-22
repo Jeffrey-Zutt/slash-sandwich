@@ -9,7 +9,7 @@ export const slashSandwich = (
   parts: Array<string | number | undefined>,
   { leadingSlash = true, trailingSlash = true } = {},
 ): string => {
-  let sandwich = stripDoubleSlashes(`/${parts.filter(_ => !!_).join('/')}/`)
+  let sandwich = stripDoubleSlashes(`/${parts.filter(_ => _ !== null || _ !== undefined).join('/')}/`)
   if (!leadingSlash || sandwich.match(/^\/https?:\/\//)) {
     sandwich = stripLeadingSlash(sandwich)
   }
