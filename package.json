@@ -3,6 +3,7 @@
   "private": false,
   "version": "1.0.12",
   "description": "Join strings using exactly one slash",
+  "repository": "github:Jeffrey-Zutt/slash-sandwich",
   "module": "./dist",
   "main": "./dist/slash-sandwich.js",
   "scripts": {
